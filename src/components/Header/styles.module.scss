@@ -1,0 +1,60 @@
+.headerContainer {
+  height: 5rem;
+  border-bottom: 1px solid var(--black);
+  background-color: var(--blue-hvex);
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  // Alinhamento vertical
+  display: flex;
+  align-items: center;
+
+  nav {
+    margin-left: 5rem;
+    height: 5rem;
+
+    a {
+      margin-left: 30rem;
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      color: var(--black);
+
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--white);
+      }
+
+      &.active {
+        color: var(--white);
+        font-weight: bold;
+      }
+    }
+
+    button {
+      width: 60px;
+      background-color: var(--blue-hvex);
+      font-weight: 500;
+      color: var(--white);
+      border: none;
+      font-size: 1rem;
+      margin: 0;
+      padding: 3px 0;
+      cursor: pointer;
+      transition: 0.5s;
+      margin-left: auto;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}

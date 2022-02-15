@@ -1,0 +1,57 @@
+.wallpaper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../public/images/hvex_background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 608px;
+  height: 514px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+  text-align: center;
+
+  input, button {
+    display: block;
+    margin: 0.5rem auto 0;
+    padding: 10px 15px;
+    border: 1px solid #b6b6b6;
+    width: 300px;
+    outline: none;
+  }
+
+  button {
+    background-color: var(--blue-hvex);
+    border: none;
+    color: var(--white);
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+
+  label {
+    color: var(--black);
+    margin-right: auto;
+  }
+}
