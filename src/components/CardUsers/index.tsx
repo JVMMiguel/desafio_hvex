@@ -29,14 +29,22 @@ export default function CardUsers({ userURL }: CardProps) {
     <div className={styles.card}>
       <div className={styles.content}>
         <img src={user.avatar_url} alt="User avatar" />
-        <p>Usuário: {user.login}</p>
-        <p>Email: {user.email || "Não informado"}</p>
-        <p>Cidade: {user.location || "Não informado"}</p>
-        <p>Bio: {user.bio || "Não informado"}</p>
-        <p>Repo. Públicos: {user.public_repos || "Não informado"}</p>
-        <a href={user.html_url} target="_blank" rel="noreferrer">
-          Acessar perfil
-        </a>
+        <div className={styles.info}>
+          <div className={styles.infoUser}>
+            <p>
+              <span>{user.login}</span>
+            </p>
+            <p>
+              <span>{`${user.public_repos} Repo. Públicos`}</span>
+            </p>
+          </div>
+          <p>{user.email || "Não informado"}</p>
+          <p>De: {user.location || "Não informado"}</p>
+          <p>Bio: {user.bio || "Não informado"}</p>
+          <a href={user.html_url} target="_blank" rel="noreferrer">
+            Acessar perfil
+          </a>
+        </div>
       </div>
     </div>
   );

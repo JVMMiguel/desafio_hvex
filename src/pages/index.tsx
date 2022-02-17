@@ -64,7 +64,7 @@ export default function Home() {
               <p>{error}</p>
             </div>
             <button type="submit">LOGIN</button>
-            <div className={styles.register}>
+            <div className={styles.registerLink}>
               <Link href="/register">Registre-se</Link>
             </div>
           </form>

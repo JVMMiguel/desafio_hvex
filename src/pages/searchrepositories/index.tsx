@@ -10,6 +10,7 @@ export default function SearchRepositories() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
+  // Faz a requisição na API do Github usando o texto inserido e retorna o objeto
   const handleUser = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -22,7 +23,11 @@ export default function SearchRepositories() {
       <Header />
       <main className={styles["home-main"]}>
         <form onSubmit={handleUser} className={styles["home-search"]}>
-          <input type="text" onChange={(e) => setInput(e.target.value)} />
+          <input
+            type="text"
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Digite nome do usuário ou email"
+          />
           <button type="submit"></button>
         </form>
         <section>
