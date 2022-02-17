@@ -6,11 +6,10 @@
   border-top-color: #1a3535;
   height: 25px;
   width: 25px;
-  
-  
+
   @keyframes is-rotating {
-      to {
-          transform: rotate(1turn);
-      }
+    to {
+      transform: rotate(1turn);
+    }
   }
 }

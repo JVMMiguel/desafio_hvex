@@ -1,17 +1,18 @@
 .card {
-  max-width: 500px;
+  width: 634px;
+  height: 400px;
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 0 0.5rem #2525256e;
+  box-shadow: 0 0 0.25rem #2525256e;
   padding: 20px;
   transition: 0.5s;
   border-radius: 8px;
   height: auto;
 
   &:hover {
-    box-shadow: 0 0 1.5rem #2525256e;
+    box-shadow: 0 0 1rem #2525256e;
     transition: 0.5s;
   }
 
@@ -32,9 +33,10 @@
     display: block;
     text-align: center;
     text-decoration: #252525 underline;
-    }
-    
-    span, p {
-      font-weight: 500;
-    }
+  }
+
+  span,
+  p {
+    font-weight: 500;
+  }
 }
