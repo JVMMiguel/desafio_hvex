@@ -1,16 +1,45 @@
-import { ReactNode } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import styles from './styles.module.scss'
 
 interface CardProps {
-    children: ReactNode
+  userURL: string
 }
 
-export default function CardUsers ({ children }: CardProps) {
+interface githubData {
+  login?: string;
+  avatar_url?: string;
+  repos_url?: string;
+  email?: string;
+  location?: string;
+  bio?: string;
+  html_url?: string;
+  error?: string;
+  id?: number | string;
+}
+
+export default function CardUsers ({ userURL }: CardProps) {
+  const [user, setUser] = useState<githubData[]>([])
+  
+  useEffect(() => {
+    axios
+      .get(userURL)
+      .then(({ data }) => setUser(data));
+  }, []);
+  
     return (
         <div className={styles.card}>
-            <div className={styles.content}>
-                {children}
-            </div>
+          <div className={styles.content}>
+            <img src={user.avatar_url} alt="User avatar" />
+              <p>Usuário: {user.login}</p>
+              <p>Email: {user.email || 'Não informado'}</p>
+              <p>Cidade: {user.location || 'Não informado'}</p>
+              <p>Bio: {user.bio || 'Não informado'}</p>
+              <p>Repos públicos: {user.repos_url || 'Não informado'}</p>
+              <a href={user.html_url} target='_blank' rel='noreferrer'>
+                Acessar perfil
+              </a>
+          </div>
         </div>
     )
 }

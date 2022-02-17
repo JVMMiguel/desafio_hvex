@@ -2,15 +2,15 @@
   "users": [
     {
       "id": 1,
-      "name": "João Vittor",
-      "email": "joaovittorjv@live.com",
-      "password": ""
+      "name": "Usuário teste",
+      "email": "teste@teste.com",
+      "password": "testesenha"
     },
     {
       "id": 2,
       "name": "Usuário teste",
-      "email": "teste@teste.com",
-      "password": ""
+      "email": "teste@teste.com.br",
+      "password": "testesenha2"
     }
   ]
 }

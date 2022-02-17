@@ -16,16 +16,20 @@
   }
 }
 
-.home-search input {
-  display: block;
-  margin: 0.5rem auto 0;
-  padding: 10px 15px;
-  border: 1px solid #b6b6b6;
-  width: 300px;
-  outline: none;
-
+.home-search {
+  input {
+    display: inline-block;
+    margin: 0.5rem auto 0;
+    padding: 10px 15px;
+    border: 1px solid #b6b6b6;
+    width: 300px;
+    outline: none;
+  }
+  
   button {
+    margin-left: 2px;
     color: var(--white);
+    height: 40px;
     background-color: var(--blue-hvex);
     border: none;
     cursor: pointer;

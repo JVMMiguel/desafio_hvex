@@ -7,45 +7,34 @@
   box-shadow: 0 0 0.5rem #2525256e;
   padding: 20px;
   transition: 0.5s;
+  border-radius: 8px;
+  height: auto;
 
   &:hover {
     box-shadow: 0 0 1.5rem #2525256e;
     transition: 0.5s;
   }
-}
-
-.card-img-container {
-  max-width: 100px;
-  display: block;
-  margin: 0 auto;
 
   img {
-    max-width: 100%;
+    max-width: 100px;
     display: block;
     margin: 0 auto;
     border-radius: 50%;
     margin-bottom: 0.5rem;
     border: 1px solid #25252579;
   }
-}
 
-.card-user {
-  display: flex;
-  font-size: 1rem;
-  justify-content: space-between;
-}
+  p {
+    font-weight: 500;
+  }
 
-.card-info-container p {
-  font-weight: 600;
-}
-
-.card-info-container span,
-.card-user p {
-  font-weight: 500;
-}
-
-.card-info-container a {
-  display: block;
-  text-align: center;
-  text-decoration: #252525 underline;
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: #252525 underline;
+    }
+    
+    span, p {
+      font-weight: 500;
+    }
 }
