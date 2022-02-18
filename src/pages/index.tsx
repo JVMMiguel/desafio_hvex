@@ -1,8 +1,9 @@
+import { data } from "jquery";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Router from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../images/logo.svg";
 import { server } from "../services/server";
 import styles from "./home.module.scss";
@@ -12,12 +13,19 @@ export default function Home() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    const username = localStorage.getItem("userLoggedIn");
+    if (username) {
+      Router.push("/searchrepositories");
+    }
+  }, []);
+
   async function searchAllUsers() {
     try {
       const { data } = await server.get("users");
-      return data;
+      return data.users;
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -28,7 +36,9 @@ export default function Home() {
       (user) => user.email === email && user.password === password
     );
     if (userExists) {
+      localStorage.setItem("userLoggedIn", data.name);
       Router.push("/searchrepositories");
+      console.log(data.name);
     } else {
       setError("Email ou senha incorretos!");
     }

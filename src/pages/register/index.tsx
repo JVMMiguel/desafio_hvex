@@ -3,22 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "../../images/logo.svg";
+import { server } from "../../services/server";
 import styles from "./styles.module.scss";
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
   function validatePassword(event) {
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       event.preventDefault();
       setError("Senhas não conferem");
-      return false;
     } else {
-      setSuccess("Usuário logado com sucesso");
+      server.post("users/", {
+        name,
+        email,
+        password,
+      });
+      setSuccess("Usuário cadastrado com sucesso");
     }
   }
 
@@ -36,6 +42,12 @@ export default function Register() {
             className={styles.registerForm}
             onSubmit={(event) => validatePassword(event)}
           >
+            <input
+              onChange={(event) => setName(event.target.value)}
+              type="name"
+              placeholder="Nome"
+              required
+            />
             <input
               onChange={(event) => setEmail(event.target.value)}
               type="email"

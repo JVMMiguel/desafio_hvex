@@ -11,6 +11,12 @@
       "name": "Usuário teste",
       "email": "teste@teste.com.br",
       "password": "testesenha2"
+    },
+    {
+      "id": 3,
+      "name": "João Vittor",
+      "email": "joaovittorjv@live.com",
+      "password": "teste"
     }
   ]
 }
