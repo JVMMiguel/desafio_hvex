@@ -2,6 +2,7 @@
   height: 5rem;
   border-bottom: 1px solid var(--black);
   background-color: var(--blue-hvex);
+  max-width: 100%;
 }
 
 .headerContent {
@@ -20,27 +21,17 @@
 
     a {
       margin-left: 30rem;
+      margin-right: 1rem;
       display: inline-block;
       position: relative;
       padding: 0 0.5rem;
       height: 5rem;
       line-height: 5rem;
-      color: var(--black);
-
-      transition: color 0.2s;
-
-      &:hover {
-        color: var(--white);
-      }
-
-      &.active {
-        color: var(--white);
-        font-weight: bold;
-      }
+      color: var(--white);
+      font-weight: bold;
     }
 
     button {
-      width: 60px;
       background-color: var(--blue-hvex);
       font-weight: 500;
       color: var(--white);
@@ -51,10 +42,6 @@
       cursor: pointer;
       transition: 0.5s;
       margin-left: auto;
-
-      &:hover {
-        color: var(--white);
-      }
     }
   }
 }

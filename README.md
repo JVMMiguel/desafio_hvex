@@ -1,4 +1,4 @@
-<h1>Desafio HVEX - Consumindo a API do Github</h1>
+# Desafio HVEX - Consumindo a API do Github
 
 <p>A aplicação tem como funcionalidade a pesquisa de usuários do Github através do seu Username ou E-mail, mostrando os seus respectivos dados.</p>
 <p>A aplicação conta também com uma tela de login que faz a validação de um usuário "pré-cadastrado" através do JSON-Server.</p>
@@ -6,17 +6,17 @@
 
 <br />
 
-<h2>⚙️ Funcionalidades da Aplicação</h2>
+## ⚙️ Funcionalidades da Aplicação
 
 <ul>
   <li>Validação de usuário já cadastrado previamente para logar na aplicação</li>
-  <li>Página de cadastro de usuário</li>
+  <li>Página de cadastro de usuário com funcionalidade de registro do usuário no arquivo .json através do JSON-Server</li>
   <li>Pesquisa de usuários pelo seu nome/email através da API do Github</li>
 </ul>
 
 <br />
 
-<h2>🔧 Instruções para executar a Aplicação</h2>
+## 🔧 Instruções para executar a Aplicação
 
 <br />
 
@@ -26,7 +26,8 @@
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Node.js](https://nodejs.org/en/download/)
 
-Após isso, podemos seguir para o clone/execução da Aplicação!
+
+Após isso, podemos seguir para o clone e execução da Aplicação!
 
 <br />
 
@@ -52,11 +53,14 @@ Após isso, podemos seguir para o clone/execução da Aplicação!
 
 <br />
 
-<h2>🛠️ Bibliotecas/Linguagens</h2>
+## 🛠️ Bibliotecas e Linguagens
 
- * [React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web;
- * [Next.js](https://nextjs.org/) - Next.js é um framework React com foco em produção e eficiência criado e mantido pela equipe da Vercel, o Nextjs busca reunir diversas funcionalidades como renderização hibrida e estática de conteúdo, suporte a TypeScript, pre-fetching, sistema de rotas, pacotes de funcionalidades e diversos plugins e exemplos para acelerar seu desenvolvimento fornecendo uma estrutura completa para você iniciar seu projeto;
- * [Typescript](https://www.typescriptlang.org/) - O Typescript é uma linguagem de código aberto desenvolvida pela Microsoft que foi construída em cima do Javascript, que é muito difundido atualmente. Esse “superset” foi criado para adicionar recursos de tipagem estáticas à linguagem original;
+<br />
+
  * [Axios](https://axios-http.com/docs/intro) - O Axios é um cliente HTTP baseado-em-promessas para o node.js e para o navegador. É isomórfico (= pode rodar no navegador e no node.js com a mesma base de código). No lado do servidor usa o código nativo do node.js - o modulo http, enquanto no lado do cliente (navegador) usa XMLHttpRequests;
+ * [jQuery](https://jquery.com/) - jQuery é uma biblioteca JavaScript e sua principal finalidade é associar-se aos elementos JavaScript em HTMLpara conferir mais dinamismo e usabilidade às páginas na internet;
  * [JSON-Server](https://www.npmjs.com/package/json-server) - O JSON-Server é um pacote npm que você pode  usar para criar um web-service REST JSON simulando uma API;
- * [SASS](https://sass-lang.com/) - O SASS é uma linguagem de extensão do CSS e a sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas. O SASS tem como objetivo tornar o processo de desenvolvimento mais simples e eficiente.
+ * [Next.js](https://nextjs.org/) - Next.js é um framework React com foco em produção e eficiência criado e mantido pela equipe da Vercel, o Nextjs busca reunir diversas funcionalidades como renderização hibrida e estática de conteúdo, suporte a TypeScript, pre-fetching, sistema de rotas, pacotes de funcionalidades e diversos plugins e exemplos para acelerar seu desenvolvimento fornecendo uma estrutura completa para você iniciar seu projeto;
+ * [React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web;
+ * [SASS](https://sass-lang.com/) - O SASS é uma linguagem de extensão do CSS e a sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas. O SASS tem como objetivo tornar o processo de desenvolvimento mais simples e eficiente;
+ * [Typescript](https://www.typescriptlang.org/) - O Typescript é uma linguagem de código aberto desenvolvida pela Microsoft que foi construída em cima do Javascript, que é muito difundido atualmente. Esse “superset” foi criado para adicionar recursos de tipagem estáticas à linguagem original.
