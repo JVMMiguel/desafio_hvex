@@ -1,4 +1,3 @@
-import { data } from "jquery";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +22,7 @@ export default function Home() {
   async function searchAllUsers() {
     try {
       const { data } = await server.get("users");
-      return data.users;
+      return data;
     } catch (error) {
       console.error(error);
     }
@@ -32,13 +31,12 @@ export default function Home() {
   async function handleLogin(event) {
     event.preventDefault();
     const allUsers = await searchAllUsers();
-    const userExists = allUsers.some(
+    const userExists = allUsers.find(
       (user) => user.email === email && user.password === password
     );
     if (userExists) {
-      localStorage.setItem("userLoggedIn", data.name);
+      localStorage.setItem("userLoggedIn", userExists.name);
       Router.push("/searchrepositories");
-      console.log(data.name);
     } else {
       setError("Email ou senha incorretos!");
     }
